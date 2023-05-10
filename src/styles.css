@@ -21,10 +21,10 @@ body {
   align-items: center;
 }
 
-.pad-red,
-.pad-green,
-.pad-yellow,
-.pad-blue {
+.pad-purple-cabbage,
+.pad-indigo,
+.pad-summer-sky,
+.pad-blue-mist {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
@@ -62,14 +62,14 @@ h1, h2{
   font-weight: 600;
   text-transform: uppercase;
   background-color: transparent;
-  border: 1px solid yellow;
+  border: 1px solid #5fb7cf;
   cursor: pointer;
 }
 
 .start-button:hover {
-  color: greenyellow;
+  color: #aee4ed;
   font-size: 18px;
-  border-color: greenyellow;
+  border-color: #eeeeee;
   transform: rotate(5deg);
 }
 
@@ -88,76 +88,76 @@ h1, h2{
 #skill-level {
   margin-top: 20px;
   background-color: #000;
-  color: white;
-  border: 1px solid yellow;
+  color: #eeeeee;
+  border: 1px solid #5a79c8;
   font-family: 'Exo', 'Arial', sans-serif;
 }
 
-.pad-red {
+.pad-purple-cabbage {
   border-top-left-radius: 200px;
-  background-color: red;
+  background-color: #3c339a;
 }
 
-.pad-red:hover,
-.pad-red:focus {
-  background-color: #ff451a;
+.pad-purple-cabbage:hover,
+.pad-purple-cabbage:focus {
+  background-color: #CF775F;
   transform: rotate(5deg);
 }
 
-.pad-red:active,
-.pad-red.activated {
-  background-color: #ff5c36;
+.pad-purple-cabbage:active,
+.pad-purple-cabbage.activated {
+  background-color: #eeeeee;
   transform: translateY(10px);
 }
 
-.pad-green {
+.pad-indigo {
   border-top-right-radius: 200px;
-  background-color: green;
+  background-color: #5a79c8;
 }
 
-.pad-green:hover,
-.pad-green:focus {
-  background-color: #8cc218;
+.pad-indigo:hover,
+.pad-indigo:focus {
+  background-color: #EDB7AE;
   transform: rotate(5deg);
 }
 
-.pad-green:active,
-.pad-green.activated {
-  background-color: #a0ea00;
+.pad-indigo:active,
+.pad-indigo.activated {
+  background-color: #eeeeee;
   transform: translateY(10px);
 }
 
-.pad-yellow {
+.pad-summer-sky {
   border-bottom-right-radius: 200px;
-  background-color: yellow;
+  background-color: #5fb7cf;j
 }
 
-.pad-yellow:hover,
-.pad-yellow:focus {
-  background-color: #ffb900;
+.pad-summer-sky:hover,
+.pad-summer-sky:focus {
+  background-color: 	#919A33;
   transform: rotate(5deg);
 }
 
-.pad-yellow:active,
-.pad-yellow.activated {
-  background-color: #ffca3d;
+.pad-summer-sky:active,
+.pad-summer-sky.activated {
+  background-color: 	#eeeeee;
   transform: translateY(10px);
 }
 
-.pad-blue {
+.pad-blue-mist {
   border-bottom-left-radius: 200px;
-  background-color: blue;
+  background-color: 	#aee4ed;
 }
 
-.pad-blue:hover,
-.pad-blue:focus {
-  background-color: #139ddd;
+.pad-blue-mist:hover,
+.pad-blue-mist:focus {
+  background-color: #C8A95A;
   transform: rotate(5deg);
 }
 
-.pad-blue:active,
-.pad-blue.activated {
-  background-color: #2bbcff;
+.pad-blue-mist:active,
+.pad-blue-mist.activated {
+  background-color: #eeeeee;
   transform: translateY(10px);
 }
 

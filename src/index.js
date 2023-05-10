@@ -17,27 +17,27 @@ let roundCount = 0;
 
 const pads = [
   {
-    color: "red",
-    selector: document.querySelector(".js-pad-red"),
+    color: "purple-cabbage",
+    selector: document.querySelector(".js-pad-purple-cabbage"),
     sound: new Audio("./assets/simon-says-sound-1.mp3"),
   },
   {
-    color: "green",
-    selector: document.querySelector(".js-pad-green"),
+    color: "indigo",
+    selector: document.querySelector(".js-pad-indigo"),
     sound: new Audio("./assets/simon-says-sound-2.mp3"),
   },
   {
-    color: "blue",
-    selector: document.querySelector(".js-pad-blue"),
+    color: "blue-mist",
+    selector: document.querySelector(".js-pad-blue-mist"),
     sound: new Audio("./assets/simon-says-sound-3.mp3"),
   },
   {
-    color: "yellow",
-    selector: document.querySelector(".js-pad-yellow"),
+    color: "summer-sky",
+    selector: document.querySelector(".js-pad-summer-sky"),
     sound: new Audio("./assets/simon-says-sound-4.mp3"),
   },
 ];
-const colors = ["red", "green", "blue", "yellow"];
+const colors = ["purple-cabbage", "indigo", "blue-mist", "summer-sky"];
 
 /**
  * EVENT LISTENERS
