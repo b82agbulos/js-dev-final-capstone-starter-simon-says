@@ -1,32 +1,51 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Microbe&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@400;700&display=swap');
 
 html {
-  background: url('../assets/background.png') no-repeat center center fixed;
+  background: url('../assets/background.jpg') no-repeat center center fixed;
   box-sizing: border-box;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   overflow: hidden;
+  backdrop-filter: blur(0px);
+
 }
 
 body {
-  color: yellow;
-  font-family: 'Rubik Microbe', sans-serif;
+  color: white;
+  font-family: 'Exo', 'Arial', sans-serif;
   display: flex;
   justify-content: center;
   height: 100vh;
   align-items: center;
 }
 
+.pad-red,
+.pad-green,
+.pad-yellow,
+.pad-blue {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.game-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 main {
-  background-color: #000;
   padding: 40px;
 }
 
 h1 {
-  text-align: center;
   font-size: 40px;
+}
+
+h1, h2{
+  text-align: center;
+  font-family: 'Exo', 'Arial';
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 .game-controls {
@@ -37,7 +56,7 @@ h1 {
   display: inline-block;
   height: 38px;
   padding: 0 30px;
-  color: yellow;
+  color: White;
   text-align: center;
   font-size: 14px;
   font-weight: 600;
@@ -66,6 +85,14 @@ h1 {
   margin: 20px;
 }
 
+#skill-level {
+  margin-top: 20px;
+  background-color: #000;
+  color: white;
+  border: 1px solid yellow;
+  font-family: 'Exo', 'Arial', sans-serif;
+}
+
 .pad-red {
   border-top-left-radius: 200px;
   background-color: red;
@@ -74,7 +101,7 @@ h1 {
 .pad-red:hover,
 .pad-red:focus {
   background-color: #ff451a;
-  transform: rotate(-5deg);
+  transform: rotate(5deg);
 }
 
 .pad-red:active,
@@ -134,10 +161,22 @@ h1 {
   transform: translateY(10px);
 }
 
+
 .hidden {
   display: none;
 }
 
 .unclickable {
   pointer-events: none;
+}
+
+.background-blur {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(0px);
+  pointer-events: none;
+  z-index: -1;
 }
