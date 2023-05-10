@@ -18,18 +18,26 @@
 
       <!-- Game control buttons -->
       <section class="game-controls">
+        <!-- Start button -->
         <button class="start-button js-start-button">Embark</button>
+        <!-- Status span -->
         <span class="status hidden js-status"></span>
       </section>
 
       <!-- Game pad and skill level selection -->
       <div class="game-wrapper">
+        <!-- Game pad section -->
         <section class="pad-container unclickable js-pad-container">
+          <!-- Purple-cabbage pad -->
           <div class="pad pad-purple-cabbage js-pad-purple-cabbage" data-color="purple-cabbage"></div>
+          <!-- Indigo pad -->
           <div class="pad pad-indigo js-pad-indigo" data-color="indigo"></div>
+          <!-- Blue-mist pad -->
           <div class="pad pad-blue-mist js-pad-blue-mist" data-color="blue-mist"></div>
+          <!-- Summer-sky pad -->
           <div class="pad pad-summer-sky js-pad-summer-sky" data-color="summer-sky"></div>
         </section>
+        <!-- Skill level selection -->
         <select id="skill-level">
           <option value="8">Skill Level 1: 8 sequences</option>
           <option value="14">Skill Level 2: 14 sequences</option>
@@ -38,6 +46,7 @@
         </select>
       </div>
     </main>
+    <!-- JavaScript file -->
     <script src="./src/index.js"></script>
   </body>
 </html>

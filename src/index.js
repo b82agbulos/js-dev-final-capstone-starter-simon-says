@@ -10,7 +10,8 @@ const chronoAudio = new Audio("./assets/chrono.mp3");
 chronoAudio.addEventListener("canplaythrough", () => {
 });
 
-
+padContainer.classList.add('js-pad-container');
+setTimeout(() => padContainer.classList.remove('js-pad-container'), 500);
 
 /**
  * VARIABLES
@@ -52,6 +53,7 @@ padContainer.addEventListener("click", padHandler);
 startButton.addEventListener("click", startButtonHandler);
 
 const skillLevelDropdown = document.getElementById('skill-level');
+const container = document.getElementById("container");
 
 skillLevelDropdown.addEventListener('change', (event) => {
   const selectedSkillLevel = parseInt(event.target.value, 10);
@@ -85,6 +87,29 @@ function padHandler(event) {
  * HELPER FUNCTIONS
  */
 
+// Define the shake function
+function shake() {
+  // Set the container's position to relative
+  container.style.position = "relative";
+
+  // Create a random displacement in the x and y directions
+  const displacement = 10;
+  const randomX = Math.floor(Math.random() * (2 * displacement + 1)) - displacement;
+  const randomY = Math.floor(Math.random() * (2 * displacement + 1)) - displacement;
+
+  // Apply the displacement to the container's position
+  container.style.left = `${randomX}px`;
+  container.style.top = `${randomY}px`;
+
+  // Shake for 500 milliseconds
+  setTimeout(() => {
+    container.style.left = "0px";
+    container.style.top = "0px";
+  }, 500);
+}
+
+// Call the shake function every 14 seconds
+setInterval(shake, 14000);
 function setLevel(sequences) {
   maxRoundCount = sequences;
 }
@@ -160,6 +185,9 @@ function checkRound() {
       1000
     );
   } else {
+    // Rotate the pad container by 45 degrees
+    padContainer.style.transform = `rotate(${roundCount * 33.33}deg)`;
+    
     // Advance to the next round
     roundCount++;
     updateBlur(roundCount);
@@ -171,9 +199,13 @@ function checkRound() {
   }
 }
 
+
 function resetGame(text) {
-  chronoAudio.play();
   alert(text);
+  
+  // Play the audio immediately
+  chronoAudio.play();
+  
   setText(heading, "Chrono Conquest");
   startButton.classList.remove("hidden");
   statusSpan.classList.add("hidden");
@@ -184,14 +216,15 @@ function resetGame(text) {
   maxRoundCount = null;
   computerSequence = [];
   playerSequence = [];
-
-  // Play chrono audio
-  chronoAudio.play();
 }
+
+
 function updateBlur(round) {
   const blurAmount = round * 1;
   document.querySelector(".background-blur").style.backdropFilter = `blur(${blurAmount}px)`;
 }
+
+
 
 /**
  * Please do not modify the code below.

@@ -9,7 +9,11 @@ html {
   background-size: cover;
   overflow: hidden;
   backdrop-filter: blur(0px);
+}
 
+html, body {
+  height: 100%;
+  margin: 0;
 }
 
 body {
@@ -17,8 +21,9 @@ body {
   font-family: 'Exo', 'Arial', sans-serif;
   display: flex;
   justify-content: center;
-  height: 100vh;
   align-items: center;
+  font-size: calc(16px + 0.5vw);
+  min-height: 100%;
 }
 
 .pad-purple-cabbage,
@@ -31,7 +36,9 @@ body {
 .game-wrapper {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  height: 100%;
 }
 
 main {
@@ -110,6 +117,178 @@ h1, h2{
   transform: translateY(10px);
 }
 
+
+
+
+
+User
+code is incomplete
+ChatGPT
+I apologize for the mistake. Here's the complete updated code:
+
+css
+Copy code
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@400;700&display=swap');
+
+html {
+  background: url('../assets/background.jpg') no-repeat center center fixed;
+  box-sizing: border-box;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow: hidden;
+  backdrop-filter: blur(0px);
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: calc(16px + 0.5vw);
+  min-height: 100%;
+}
+
+.pad-purple-cabbage,
+.pad-indigo,
+.pad-summer-sky,
+.pad-blue-mist {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.game-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+main {
+  padding: 40px;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h1, h2, Body {
+  text-align: center;
+  font-family: 'Exo', 'Arial';
+  text-shadow: 5px 5px 5px rgba(60, 51, 154, 0.8);
+}
+
+.game-controls {
+  text-align: center;
+}
+
+.start-button {
+  display: inline-block;
+  height: 38px;
+  padding: 0 30px;
+  color: White;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 1px solid #5fb7cf;
+  cursor: pointer;
+}
+
+.start-button:hover {
+  color: #aee4ed;
+  font-size: 18px;
+  border-color: #eeeeee;
+  transform: rotate(5deg);
+}
+
+.status {
+  font-size: 22px;
+}
+
+.pad-container {
+  display: grid;
+  grid-template-rows: 200px 200px;
+  grid-template-columns: 200px 200px;
+  grid-gap: 5px;
+  margin: 20px;
+  animation: shake 0.5s;
+  animation-iteration-count: 1;
+}
+@keyframes shake {
+  0% {
+    transform: translate(0);
+  }
+  10% {
+    transform: translate(-10px, 0);
+  }
+  20% {
+    transform: translate(10px, 0);
+  }
+  30% {
+    transform: translate(-10px, 0);
+  }
+  40% {
+    transform: translate(10px, 0);
+  }
+  50% {
+    transform: translate(-10px, 0);
+  }
+  60% {
+    transform: translate(10px, 0);
+  }
+  70% {
+    transform: translate(-10px, 0);
+  }
+  80% {
+    transform: translate(10px, 0);
+  }
+  90% {
+    transform: translate(-10px, 0);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+@media (max-width: 767px) {
+  .pad-container {
+    justify-self: center;
+  }
+}
+
+#skill-level {
+  margin-top: 20px;
+  background-color: #000;
+  color: #eeeeee;
+  border: 1px solid #5a79c8;
+  font-family: 'Exo', 'Arial', sans-serif;
+}
+
+.pad-purple-cabbage {
+  border-top-left-radius: 200px;
+  background-color: #3c339a;
+}
+
+.pad-purple-cabbage:hover,
+.pad-purple-cabbage:focus {
+  background-color: #CF775F;
+  transform: rotate(5deg);
+}
+
+.pad-purple-cabbage:active,
+.pad-purple-cabbage.activated {
+  background-color: #eeeeee;
+  transform: translateY(10px);
+}
+
 .pad-indigo {
   border-top-right-radius: 200px;
   background-color: #5a79c8;
@@ -161,6 +340,9 @@ h1, h2{
   transform: translateY(10px);
 }
 
+.pad-container.rotate {
+  transform: rotate(90deg);
+}
 
 .hidden {
   display: none;
@@ -180,3 +362,4 @@ h1, h2{
   pointer-events: none;
   z-index: -1;
 }
+
