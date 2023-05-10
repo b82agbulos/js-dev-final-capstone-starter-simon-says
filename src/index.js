@@ -6,6 +6,11 @@ const startButton = document.querySelector(".js-start-button");
 const statusSpan = document.querySelector(".js-status");
 const heading = document.querySelector(".js-heading");
 const padContainer = document.querySelector(".js-pad-container");
+const chronoAudio = new Audio("./assets/chrono.mp3");
+chronoAudio.addEventListener("canplaythrough", () => {
+});
+
+
 
 /**
  * VARIABLES
@@ -63,6 +68,7 @@ function startButtonHandler() {
   startButton.classList.add("hidden");
   statusSpan.classList.remove("hidden");
   playComputerTurn();
+  chronoAudio.pause(); // stop the audio
 
   return { startButton, statusSpan };
 }
@@ -166,6 +172,7 @@ function checkRound() {
 }
 
 function resetGame(text) {
+  chronoAudio.play();
   alert(text);
   setText(heading, "Chrono Conquest");
   startButton.classList.remove("hidden");
@@ -177,6 +184,9 @@ function resetGame(text) {
   maxRoundCount = null;
   computerSequence = [];
   playerSequence = [];
+
+  // Play chrono audio
+  chronoAudio.play();
 }
 function updateBlur(round) {
   const blurAmount = round * 1;
